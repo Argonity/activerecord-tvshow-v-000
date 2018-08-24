@@ -6,11 +6,11 @@ class Show < ActiveRecord::Base
 
   def self.most_popular_show
     Show.find_by(highest_rating)
+    binding.pry
   end
 
   def self.lowest_rating
     Show.minimum(:rating)
-    binding.pry
   end
 
   def self.least_popular_show
